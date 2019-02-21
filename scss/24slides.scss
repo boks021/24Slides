@@ -1,0 +1,251 @@
+@import 'mixins';
+
+*{
+    margin : 0 ;
+    padding: 0 ;
+    box-sizing: border-box; 
+}
+
+html , body {
+    width: 100%;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;  
+}       
+
+header {
+    background-color: white;
+    min-height: 20vh;
+    width: 100%;
+    text-align: center;
+    .logo {
+        #slika {
+            width: 60px;
+            height: 60px; 
+        }
+    }
+    p { 
+        color:rgb(84, 157, 185) ;
+        font-weight: bolder;    
+    }
+    .nav {
+        padding: 10px;
+        input {
+            color: white;
+            border: none;
+            background-color: rgb(101, 172, 101);
+            padding: 10px 10px;
+            margin-bottom: 5px;
+        }
+        select {
+            padding: 8px 10px;
+            color:rgb(84, 157, 185) ;
+            border : 1px solid rgb(84, 157, 185) ;
+        }
+    }
+}
+.proba {
+    position:absolute;
+    top: 180px;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    overflow:scroll;  
+}
+section.unlock {
+    text-align : center;
+    color: rgb(84, 157, 185) ;
+    font-weight: bolder;
+    background-color: rgb(238, 228, 228);
+    line-height: 3em;
+    
+}
+section.main {
+    width:100%;
+    text-align: center;
+    background-color: rgb(243, 237, 237);
+    .aside {
+        width: 100%;
+        ul {
+            li {
+                padding: 5px;
+                a{
+                    text-decoration: none;
+                    color : gray;  
+                }
+            }
+        }
+        
+    }
+    .boxes {
+        width: 100%;
+        padding-bottom: 20px;
+        .box {
+            width: 48%;
+            display: inline-block;
+            padding: 5px;
+            background:snow;
+            position: relative;
+            img {
+                width:100%;
+                height: 170px; 
+                filter:brightness(55%);
+            }
+            .hoverFora {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%);
+                color : white;
+                text-align: center ;
+                display: block;
+                p {
+                    font-family: 'Arial Narrow';
+                }
+            }
+            &:hover > {
+                .hoverFora {
+                    display: none;
+                }
+                img {
+                    filter : none;
+                    opacity: 0.95;
+                }
+            }
+            a#left , a#right {
+                text-align: center;
+                padding: 3px;
+                display: block;
+                text-decoration: none;
+                color : gray;
+                font-size: 0.6em;
+            }
+        }
+    }
+}
+
+footer {
+    width : 100%;
+    min-height: 20vh;
+    background-color: rgb(92, 88, 88);
+    text-align: center;
+    
+    ul {
+        width: 100%;
+        padding: 15px 0;
+        li {
+            display:block;
+            padding: 5px;
+            a {
+                text-decoration: none;
+                color : white; 
+                padding: 0 10px; 
+            }
+        }
+    }
+    p {
+        color : rgb(84, 157, 185);
+        font-weight: bolder;   
+        padding: 7px; 
+    }
+    
+}
+
+@media screen and (min-width : 768px) {
+    
+    header {
+        width: 100%;
+        @include clearfix;
+        
+        div.logo {
+            float :left;
+            margin-left: 20px;
+            #slika {
+                width: 70px; 
+            }
+        }
+        p {
+            float: left;
+            padding: 20px;  
+        }
+        .nav {
+            float : right;
+            padding-right: 30px; 
+            input , select {
+                margin-top : 5px;
+            }
+        }
+        
+    }
+    .proba {
+        position:absolute;
+        top: 70px;
+        left:0px;
+        right:0px;
+        bottom:0px;
+        overflow:scroll;  
+    }
+    
+    section.unlock {
+        text-align: left ;
+        padding-left: 15px;
+    }
+    
+    section.main {
+        
+        @include clearfix;    
+        .aside {
+            float : left ;
+            width : 25% ;
+            padding-top : 10px; 
+            ul {
+                li {
+                    padding: 15px 10px;
+                    text-align: left;
+                }
+            }
+        }
+        .boxes {
+            float : right;
+            width : 74%;
+            @include clearfix;
+            .box {
+                width : 28% ;
+                float: right ;
+                padding: 15px;
+                margin: 10px;
+                //box-shadow: 0.1px 0.1px 0.1px;
+                @include clearfix;
+                a#left , a#right{  
+                    font-size: normal;
+                    padding: 5px 5px;
+                    display: inline-block;
+                } 
+            }
+        }
+    }
+    
+    footer {
+        width: 100%;
+        ul {
+            width: 60%;
+            margin : auto ;
+            li {
+                display: inline-block ;
+                padding:  35px 0 ;   
+            }
+        } 
+    }
+    .boks {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        .colon {
+            background: salmon;
+            padding: 15px;
+            //flex: 1;
+            width: 24%;
+        }
+    }
+    // ili space-between ili flex : 1 
+    // Responsive se radi sa display : block i width : 100%.
+}

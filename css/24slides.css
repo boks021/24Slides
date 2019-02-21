@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif; }
+
+header {
+  background-color: white;
+  min-height: 20vh;
+  width: 100%;
+  text-align: center; }
+  header .logo #slika {
+    width: 60px;
+    height: 60px; }
+  header p {
+    color: #549db9;
+    font-weight: bolder; }
+  header .nav {
+    padding: 10px; }
+    header .nav input {
+      color: white;
+      border: none;
+      background-color: #65ac65;
+      padding: 10px 10px;
+      margin-bottom: 5px; }
+    header .nav select {
+      padding: 8px 10px;
+      color: #549db9;
+      border: 1px solid #549db9; }
+
+.proba {
+  position: absolute;
+  top: 180px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  overflow: scroll; }
+
+section.unlock {
+  text-align: center;
+  color: #549db9;
+  font-weight: bolder;
+  background-color: #eee4e4;
+  line-height: 3em; }
+
+section.main {
+  width: 100%;
+  text-align: center;
+  background-color: #f3eded; }
+  section.main .aside {
+    width: 100%; }
+    section.main .aside ul li {
+      padding: 5px; }
+      section.main .aside ul li a {
+        text-decoration: none;
+        color: gray; }
+  section.main .boxes {
+    width: 100%;
+    padding-bottom: 20px; }
+    section.main .boxes .box {
+      width: 48%;
+      display: inline-block;
+      padding: 5px;
+      background: snow;
+      position: relative; }
+      section.main .boxes .box img {
+        width: 100%;
+        height: 170px;
+        filter: brightness(55%); }
+      section.main .boxes .box .hoverFora {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-align: center;
+        display: block; }
+        section.main .boxes .box .hoverFora p {
+          font-family: 'Arial Narrow'; }
+      section.main .boxes .box:hover > .hoverFora {
+        display: none; }
+      section.main .boxes .box:hover > img {
+        filter: none;
+        opacity: 0.95; }
+      section.main .boxes .box a#left, section.main .boxes .box a#right {
+        text-align: center;
+        padding: 3px;
+        display: block;
+        text-decoration: none;
+        color: gray;
+        font-size: 0.6em; }
+
+footer {
+  width: 100%;
+  min-height: 20vh;
+  background-color: #5c5858;
+  text-align: center; }
+  footer ul {
+    width: 100%;
+    padding: 15px 0; }
+    footer ul li {
+      display: block;
+      padding: 5px; }
+      footer ul li a {
+        text-decoration: none;
+        color: white;
+        padding: 0 10px; }
+  footer p {
+    color: #549db9;
+    font-weight: bolder;
+    padding: 7px; }
+
+@media screen and (min-width: 768px) {
+  header {
+    width: 100%; }
+    header:before, header:after {
+      content: "";
+      display: table; }
+    header:after {
+      clear: both; }
+    header div.logo {
+      float: left;
+      margin-left: 20px; }
+      header div.logo #slika {
+        width: 70px; }
+    header p {
+      float: left;
+      padding: 20px; }
+    header .nav {
+      float: right;
+      padding-right: 30px; }
+      header .nav input, header .nav select {
+        margin-top: 5px; }
+
+  .proba {
+    position: absolute;
+    top: 70px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    overflow: scroll; }
+
+  section.unlock {
+    text-align: left;
+    padding-left: 15px; }
+
+  section.main:before, section.main:after {
+    content: "";
+    display: table; }
+  section.main:after {
+    clear: both; }
+  section.main .aside {
+    float: left;
+    width: 25%;
+    padding-top: 10px; }
+    section.main .aside ul li {
+      padding: 15px 10px;
+      text-align: left; }
+  section.main .boxes {
+    float: right;
+    width: 74%; }
+    section.main .boxes:before, section.main .boxes:after {
+      content: "";
+      display: table; }
+    section.main .boxes:after {
+      clear: both; }
+    section.main .boxes .box {
+      width: 28%;
+      float: right;
+      padding: 15px;
+      margin: 10px; }
+      section.main .boxes .box:before, section.main .boxes .box:after {
+        content: "";
+        display: table; }
+      section.main .boxes .box:after {
+        clear: both; }
+      section.main .boxes .box a#left, section.main .boxes .box a#right {
+        font-size: normal;
+        padding: 5px 5px;
+        display: inline-block; }
+
+  footer {
+    width: 100%; }
+    footer ul {
+      width: 60%;
+      margin: auto; }
+      footer ul li {
+        display: inline-block;
+        padding: 35px 0; }
+
+  .boks {
+    display: flex;
+    justify-content: space-between;
+    text-align: center; }
+    .boks .colon {
+      background: salmon;
+      padding: 15px;
+      width: 24%; } }
+
+/*# sourceMappingURL=24slides.css.map */
